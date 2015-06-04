@@ -5,6 +5,7 @@ Requirements
 ------------
 ### Cookbooks
 The following cookbooks are direct dependencies:
+
 - apt
 - user
 - openssh
@@ -13,6 +14,7 @@ The following cookbooks are direct dependencies:
 
 ### Platforms
 The following platforms are supported and tested under test kitchen:
+
 - Ubuntu 14.04
 
 Other Debian family distributions are assumed to work.
