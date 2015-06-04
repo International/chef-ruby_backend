@@ -36,7 +36,7 @@ It also integrates nicely with Capistrano's default configuration. This enables 
 ### default
 Installs the necessary packages for a Ruby or Rails deployment. Rbenv is installed on a deploy user and environment variables are also set. When ssh keys are provided they are also added to the deploy user's `~/.ssh/authorized_keys`
 
-It is assumed that the pg gem would be used so the package `libpq-dev` is also installed. Since the recipe is targeted for rails deployments, the package `nodejs` is also installed.
+It is assumed that the postgresql and rails would be used so the package `libpq-dev` is also installed. Since the recipe is targeted for rails deployments, the package `nodejs` is also installed.
 
 This recipe also permits user environments in the sshd_config file and sets the ssh environment variables in `~/.ssh/environment`.
 
