@@ -1,9 +1,3 @@
-#
-# Cookbook Name:: thin
-# Recipe:: default
-#
-# Copyright (c) 2015 SourcePad, All Rights Reserved.
-
 include_recipe 'apt'
 include_recipe 'apt::unattended-upgrades'
 include_recipe 'user'
