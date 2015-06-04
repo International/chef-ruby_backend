@@ -1,0 +1,13 @@
+name 'ruby_backend'
+maintainer 'Lester Celestial'
+maintainer_email 'leicester.ex@gmail.com'
+license 'Apache 2.0'
+description 'Installs ruby with rbenv'
+long_description 'Installs ruby with rbenv'
+version '0.1.0'
+
+depends 'apt'
+depends 'user'
+depends 'openssh'
+depends 'ruby_build'
+depends 'rbenv'
