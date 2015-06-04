@@ -39,7 +39,7 @@ user_account node['ruby_backend']['deploy_user'] do
   manage_home true
   shell "/bin/bash"
   home home_dir
-  ssh_keys node['ruby_backend']['deploy_user']['ssh_keys'] if node['ruby_backend']['deploy_user']['ssh_keys']
+  ssh_keys node['ruby_backend']['deploy_ssh_keys'] if node['ruby_backend']['deploy_ssh_keys']
   action :create
 end
 

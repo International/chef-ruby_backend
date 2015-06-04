@@ -15,4 +15,7 @@ suites:
     attributes:
       ruby_backend:
         deploy_user: 'deploy'
+        deploy_ssh_keys:
+          - 'ssh-rsa test-pubkey'
+          - 'ssh-rsa test-pubkey2'
         application_name: 'test_app'
