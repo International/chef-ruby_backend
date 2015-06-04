@@ -2,7 +2,7 @@
 
 ## License and Author
 
-Author:: [Lester Celestial][santopuppy]
+Author:: [Lester Celestial](https://github.com/santopuppy)
 Copyright 2015, Lester Celestial
 
 Licensed under the Apache License, Version 2.0 (the "License");
