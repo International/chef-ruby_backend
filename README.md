@@ -34,7 +34,11 @@ This cookbook installs the necessary packages for a Ruby (or Rails) server. Ruby
 It also integrates nicely with Capistrano's default configuration. This enables you to deploy right away to servers provisioned by this cookbook. Just make sure to include the capistrano integration for rbenv and you are good to go.
 
 ### default
-Installs the necessary packages for a Ruby or Rails deployment. Rbenv is installed on a deploy user and environment variables are also set.
+Installs the necessary packages for a Ruby or Rails deployment. Rbenv is installed on a deploy user and environment variables are also set. When ssh keys are provided they are also added to the deploy user's `~/.ssh/authorized_keys`
+
+It is assumed that the pg gem would be used so the package `libpq-dev` is also installed. Since the recipe is targeted for rails deployments, the package `nodejs` is also installed.
+
+This recipe also permits user environments in the sshd_config file and sets the ssh environment variables in `~/.ssh/environment`.
 
 License & Authors
 -----------------
