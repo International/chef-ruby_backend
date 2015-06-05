@@ -1,6 +1,6 @@
 name 'ruby_backend'
 maintainer 'Lester Celestial'
-maintainer_email 'leicester.ex@gmail.com'
+maintainer_email 'lesterc@sourcepad.com'
 license 'Apache 2.0'
 description 'Installs ruby with rbenv and configures the server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md')) 
