@@ -19,3 +19,10 @@ suites:
           - 'ssh-rsa test-pubkey'
           - 'ssh-rsa test-pubkey2'
         application_name: 'test_app'
+        db_settings:
+          adapter: postgresql
+          username: test_user
+          password: password
+          database: test_database
+          host: host
+        configure_thin: true

@@ -4,7 +4,7 @@ maintainer_email 'leicester.ex@gmail.com'
 license 'Apache 2.0'
 description 'Installs ruby with rbenv and configures the server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md')) 
-version '0.2.1'
+version '0.3.0'
 
 recipe 'ruby_backend', "Installs ruby with rbenv and configures the server for ruby applications deployment"
 
@@ -24,7 +24,7 @@ attribute 'ruby_backend/deploy_user',
 attribute 'ruby_backend/application_name',
   display_name: "Application Name",
   description: "Name of the application to be deployed.",
-  required: "required"
+  required: "recommended"
 
 attribute 'ruby_backend/ruby_version',
   display_name: "Ruby version",
@@ -39,4 +39,9 @@ attribute 'ruby_backend/envinronment_variables',
 attribute 'ruby_backend/deploy_ssh_keys',
   display_name: "SSH Keys",
   description: "SSH keys to be added to the deploy user's ~/.ssh/authorized_keys",
+  required: "recommended"
+
+attribute 'ruby_backend/db_settings',
+  display_name: "Database setings",
+  description: "Hash which contains the database.yml configuration",
   required: "recommended"

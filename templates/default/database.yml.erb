@@ -1,0 +1,4 @@
+<%= node['ruby_backend']['environment'] %>:
+<% node['ruby_backend']['db_settings'].each do |config, val| %>
+  <%= config %>: <%= val %>
+<% end %>

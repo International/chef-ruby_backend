@@ -24,7 +24,7 @@ GRAPH
   rbenv (0.7.3)
     java (> 1.4.0)
     ruby_build (>= 0.0.0)
-  ruby_backend (0.2.1)
+  ruby_backend (0.3.0)
     apt (>= 0.0.0)
     openssh (>= 0.0.0)
     rbenv (>= 0.0.0)

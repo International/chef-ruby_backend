@@ -21,13 +21,28 @@ Other Debian family distributions are assumed to work.
 
 Attributes
 ----------
+- `node['ruby_backend']['environment']` - Used for setting the environment in the shell, ssh, database.yml, and thin.yml. Defaults to `production`
 - `node['ruby_backend']['ruby_version']` - Sets the ruby version to be installed to the deploy user. Default value is `"2.2.2"`
-- `node['ruby_backend']['envinronment_variables']` - Hash of environment variables to be set on the deploy user. Default values are `{ 'RAILS_ENV' => 'production', 'RACK_ENV' => 'production' }`
+- `node['ruby_backend']['envinronment_variables']` - Hash of environment variables to be set on the deploy user. Default values are `{ 'RAILS_ENV' => node['ruby_backend']['environment'], 'RACK_ENV' => node['ruby_backend']['environment'] }`
 - `node['ruby_backend']['deploy_ssh_keys']` - A String or an Array of ssh keys to be placed on the deploy user's `~/.ssh/authorized_keys`. Defaults to `nil`
+- `node['ruby_backend']['application_name']` - The name of the application that will be deployed to the server. This attribute is used for creating the deploy directory `/var/www/node['ruby_backend']['application_name']`. This also happens to be Capistrano 3's default deploy folder convention.
 
 ### Required Attributes
 - `node['ruby_backend']['deploy_user']` - The name of the deploy user that will be created on the server.
-- `node['ruby_backend']['application_name']` - The name of the application that will be deployed to the server. This attribute is used for creating the deploy directory `/var/www/node['ruby_backend']['application_name']`. This also happens to be Capistrano 3's default deploy folder convention.
+
+### Database Configuration Attributes
+- `node['ruby_backend']['db_settings']` - If this attribute is present, the cookbook also creates a `database.yml` file. Accepts a hash of connection settings. Posgresql database is supported by default. If you need to use MySQL, you need to install the necessary libraries on the server manually.
+```ruby
+{ adapter: 'postgresql'
+  username: 'test_user'
+  password: 'password'
+  database: 'test_database'
+  host: 'host' }
+```
+
+### Thin Configuration attributes
+- `node['ruby_backend']['configure_thin']` - Tell the recipe to create a thin configuration file for you. Defaults to `false`
+
 
 Recipes 
 -------

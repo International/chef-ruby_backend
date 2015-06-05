@@ -1,0 +1,15 @@
+user: <%= node['ruby_backend']['deploy_user'] %>
+group: <%= node['ruby_backend']['deploy_user'] %>
+pid: <%= node['ruby_backend']['thin_settings']['pid'] %>
+timeout: <%= node['ruby_backend']['thin_settings']['timeout'] %>
+wait: <%= node['ruby_backend']['thin_settings']['wait'] %>
+log: <%= node['ruby_backend']['thin_settings']['log'] %>
+max_conns: <%= node['ruby_backend']['thin_settings']['max_conns'] %>
+require: []
+environment: <%= node['ruby_backend']['environment'] %>
+max_persistent_conns: <%= node['ruby_backend']['thin_settings']['max_persistent_conns'] %>
+servers: <%= node['ruby_backend']['thin_settings']['servers'] %>
+daemonize: <%= node['ruby_backend']['thin_settings']['daemonize'] %>
+port: <%= node['ruby_backend']['thin_settings']['port'] %>
+address: <%= node['ruby_backend']['thin_settings']['address'] %>
+onebyone: <%= node['ruby_backend']['thin_settings']['onebyone'] %>
