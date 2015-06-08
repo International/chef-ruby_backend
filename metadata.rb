@@ -4,7 +4,7 @@ maintainer_email 'lesterc@sourcepad.com'
 license 'Apache 2.0'
 description 'Installs ruby with rbenv and configures the server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md')) 
-version '0.3.1'
+version '0.4.0'
 
 recipe 'ruby_backend', "Installs ruby with rbenv and configures the server for ruby applications deployment"
 
